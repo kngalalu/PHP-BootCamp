@@ -1,44 +1,68 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Day of the 42</title>
-    <link rel="stylesheet" type="text/css" href="doft.css">
-</head>
-<body class="body">
-    <div class="container" title="container">
-        <header>
-            <img class="logo" src="resources/day_of_the_42.png" alt="42 logo" title="logo">
-            <img class="search" src="resources/loupe.png" alt="search logo" title="search">
-            <a href="https://www.disney.com"><img class="reload" src="resources/reload.png" alt="Start from the beginning" title="Start from the beginning"></a>
-            <a href="https:www.relaischateaux.com"><img class="close" src="resources/close.gif" alt="Disconnect" title="Disconnect"></a>
-        </header>
-        <div class="leftmenu" title="menu1">
-            <img src="resources/arrow.png" alt="Advance" title="Advance">
-            <img src="resources/main.png" alt="Take" title="Take">
-            <img class="selected" src="resources/oeil.png" alt="Look" title="Look">
-            <img src="resources/outil.png" alt="Use" title="Use">
-            <img src="resources/chat-icon.png" alt="Speak" title="Speak">
-        </div>
-        <div class="content" title="screen">
-            <img src="resources/cluster.jpg" alt="cluster" title="cluster" usemap="#image-map">
-            <map name="image-map">
-                <area target="" alt="" title="" href="https://www.apple.com/" coords="813,322,1002,463" shape="rect">
-                <area target="" alt="" title="" href="https://www.ikea.com/" coords="334,333,411,463" shape="rect">
-            </map>
-            <div class="form" title="form">
-                    Vous <span class="big">entrez</span> alors dans une grande piece rempli<br /> d'<span class="shadow">ordinateurs</span>...<br />
-                    <span class="italic">- Bonjour, vous êtes nouveau ici ?</span>
-                    <form action="#">
-                        <input type="text">
-                        <input type="submit" value="Repondre">
-                    </form>
+    <head>
+        <title>Day of the 42</title>
+        <link rel="stylesheet" type="text/css" href="doft.css"/>
+    </head>
+    <body>
+        <div class="banner_top">
+             <!--Top of the website i.e banner-->
+            <header class="banner_box">
+                <img class="img_doft" src="resources/day_of_the_42.png"/>
+                <!--reload.png -> Disney link-->
+                <a href="http://www.disney.com" title="Start from the beginning">
+                    <img class="img_reload" src="resources/reload.png">
+                </a>
+                <!--close.gif -> chateaux -> Disconnect-->
+                <a href="http://www.relaischateaux.com" title="Disconnect">
+                    <img class="img_close" src="resources/close.gif">
+                </a>
+                <img class="img_loupe" src="resources/loupe.png" alt="loupe">
+            </header>
+            <!--Top banner complete-->
+            <div class="banner_left">
+                    <aside class="col2">
+                        <div class="banner_box">
+                            <centre>
+                                <a href="#" title="Advance"><img class="img_icon" src="resources/arrow.png"/></a>
+                                <a href="#" title="Take"><img class="img_icon" src="resources/main.png"></a>
+                                <a href="#" title="Look"><img class="img_icon_border" src="resources/oeil.png"></a>
+                                <a href="#" title="Use"><img class="img_icon" src="resources/outil.png"></a>
+                                <a href="#" title="Speak"><img class="img_icon" src="resources/chat-icon.png"></a>
+                            </centre>
+                        </div>
+                    </aside>
+            <!--Banner Left complete-->
+            <article class="col8">
+                <div class="banner_box">
+                    <img class="img_cluster" src="resources/cluster.jpg" usemap="#image-map">
+                    <map name="image-map">
+                        <area target="" alt="IKEA" title="IKEA" href="http://www.ikea.com" coords="306,290,390,481" shape="rect">
+                        <area target="" alt="APPLE" title="APPLE" href="http://www.apple.com" coords="715,274,872,423" shape="rect">
+                    </map>
+                </div>
+            </article>
+            <!--BANNER RIGHT START-->
+            <aside class="col2">
+                <div class="banner_box banner_right">
+                    <centre>
+                        <a href="#" title="Don't Panic Book"><img class="img_icon" src="resources/book.png"/></a>
+                        <a href="#" title="Towel"><img class="img_icon" src="resources/towel.png"/></a>
+                    </centre>
+                    <!--<a href="#" title="bricks"><img class="img_icon" src="resources/brick.jpg"/></a>-->
+                    <div class="brick" title="brick"></div>
+                </div>
+            </aside>
+            <!--Banner right complete-->            
+        <!--Banners complete, time for text box-->
+            <div class="text_box">
+                <!--You <span class="text_large"> enter </span> a large room filled with <span class="text_shadow">computers</span> <br />
+                <span class="text_italic">-Hello, are you new here?</span>... <br />-->
+                Vous <span class="text_large"> entrez </span> alors dans une grande remplie <span class="text_shadow">d'ordinateurs</span>...<br />
+                <span class="text_italic">- Bonjour, vous êtes nouveau ici ?</span> <br />
+                <input type="text" size="48px">
+                <button onclick="">Submit</button>
             </div>
         </div>
-        <div class="rightmenu" title="menu2">
-			<img src="resources/book.png" alt="book", title="book">
-			<img src="resources/towel.png" alt="towel" title="towel">
-			<div class="wall" title="wall">
-		</div>
-    </div>
-</body>
+    </body>
 </html>

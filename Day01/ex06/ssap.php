@@ -1,18 +1,18 @@
 #!/usr/bin/php
 <?php
-if ($argc > 1)
-{
-    $array = [];
-    $i = 1;
-    while ($i < $argc)
-    {
-        $origin_str = trim($argv[$i]);
-        $temp_str = array_filter(explode(" ", $origin_str), "strlen");
-        $array = array_merge($array, $temp_str);
-        $i++;
+    unset($argv[0]);//remove argv[0] from argv array
+    $str = array();
+    foreach ($argv as $value) {
+        if ($value == trim($value) && (strpos($value, ' ') !== false))
+        {
+            $my_word = explode(" ", $value);
+            $my_word = array_diff($my_word, [""]);
+            $str = array_merge($my_word, $str);
+        }
+        else
+            array_push($str, $value);
     }
-    sort($array);
-    foreach ($array as $str)
-        echo "$str\n";
-}
+    sort($str);
+    foreach($str as $value)
+        print ($value."\n");
 ?>

@@ -1,11 +1,13 @@
-#!/usr/bin/php
 <?php
-function ft_split($str)
+function    ft_split($str)
 {
-    $arr = explode(" ", $str);
-    $array =array_filter($arr, "strlen");
-    sort($array);
-    return ($array);
+    if (is_string($str))
+    {
+        $table = array_filter(explode(' ', $str));
+        sort ($table, SORT_STRING);
+        return ($table);
+    }
+    else
+        return (FALSE);
 }
-
 ?>

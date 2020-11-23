@@ -1,11 +1,14 @@
-#!/usr/bin/php
 <?php
-function ft_is_sort($arr)
+function ft_is_sort($str)
 {
-    $array = $arr;
-    sort($array);
-    $arr_rev = array_reverse($array);
-    return ($arr == $array || $arr == $arr_rev);
+    $my_arr = $str;
+    sort ($my_arr, SORT_STRING);
+    $i = 0;
+    while ($i < sizeof($str))
+    {
+        if (strcmp($str[$i], $my_arr[$i]) != 0)
+            return (FALSE);
+        $i++;
+    }
+    return (TRUE);
 }
-
-?>

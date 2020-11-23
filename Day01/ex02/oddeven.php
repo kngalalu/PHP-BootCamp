@@ -1,41 +1,28 @@
 #!/usr/bin/php
 <?php
-$read = fopen('php://stdin', 'r');
-while($read)
+$i = fopen('php://stdin', 'r');
+while ($i)
 {
-    echo "Enter a number: ";
-    $str = rtrim(fgets(STDIN));
-    if (feof(STDIN)) 
+    print("Enter a number: ");
+    $get_next_line = rtrim(fgets(STDIN));
+    if (feof(STDIN))
     {
+        print("\n");
         exit ();
-
     }
-    if (is_numeric($str))
+    $var = $get_next_line;
+    if (is_numeric($var)) 
     {
-        $str = (int)$str;
-        if ($str % 2 == 0)
-        {
-            echo "The number ";
-            echo $str;
-            echo " is even";
-        }
+        $var = (int)$var;
+
+        print ("The number ".$var." is ");
+        if ($var % 2 == 0)
+            print ("even");
         else
-        {
-            echo "The number ";
-            echo $str;
-            echo " is odd";
-        }
+            print ("odd");
     }
     else
-    {
-        if ($str === "" || !is_numeric($str))
-        {
-            echo "'";
-            echo $str;
-            echo "'";
-            echo " is not a number";
-        }
-    } 
-echo "\n";
-
+        print("'".$var."' is not a number");
+    print("\n");
 }
+?>
